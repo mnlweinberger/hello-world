@@ -16,6 +16,7 @@ foreach $line (<IN>){
 	$untreated = $split[1];
 #	print $iodine."\t";
 #	print $untreated."\n";
+	print OUT "set -x\n";
 
 # First step - check the alignment rates to make sure everything is going OK at this point
 	print OUT "echo check alignment rate\n";
