@@ -136,7 +136,7 @@ foreach $line (<IN>){
 
 	print OUT "\n\n";
 # Now it's time for running the critiria : FC>2, mut_rate>0.1 and diff>0.5
-	print OUT "echo Running Xushen's critiria\n";
+	print OUT "echo Running the Xushen critiria\n";
 	print OUT q{awk 'OFS="\t" {a=10; if($5==0 && $4>0.1 && $4-$5>0.05) print $1,$2,$3,$4/a,$4-$5}{if($5!=0 && $4>0.1 && $4/$5>2 && $4-$5>0.05) print $1,$2,$3,$4/$5,$4-$5}' };
 	print OUT "$iodine"."-"."$untreated"."_AT > "."$iodine"."-"."$untreated"."_AT_good_points.txt\n";
 
