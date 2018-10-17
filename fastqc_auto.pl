@@ -24,7 +24,7 @@ foreach $line (<IN>){
 	$r2 = $split[1];
 	system("/nadata/software/FastQC_0.11/fastqc $r1".".fastq.gz");
 	system("/nadata/software/FastQC_0.11/fastqc $r2".".fastq.gz");
-	system("/nadata/software/trim_galore --paired -q 20 --length 30 --trim-n  $r1 $r2");	
+        system("/nadata/software/trim_galore --paired -q 20 --length 30 --trim-n  $r1".".fastq.gz"." $r2".".fastq.gz");	
 	system("/nadata/software/FastQC_0.11/fastqc $r1"."_val_1.fq.gz");
         system("/nadata/software/FastQC_0.11/fastqc $r2"."_val_2.fq.gz");
 	}
